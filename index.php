@@ -149,7 +149,83 @@ $rootPath = '/Lap_trinh_web';
                                                 
         }
         /* End information */
+        /*Start Best Seller*/
+        /* Đảm bảo tất cả các ô sản phẩm có chiều cao bằng nhau */
+        .container.mb-5 .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
+        /* Định dạng cho ô sản phẩm */
+        .container.mb-5 .col-xl-4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            flex: 1 1 calc(33.333% - 20px); /* Đảm bảo kích thước cân đối */
+            margin: 10px;
+            max-width: 33.333%; /* Đảm bảo cân bằng 3 sản phẩm trong một hàng */
+            min-height: 400px; /* Đảm bảo chiều cao tối thiểu đồng đều */
+        }
+
+        .container.mb-5 .col-xl-4:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hình ảnh sản phẩm */
+        .container.mb-5 .col-xl-4 img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 3px solid #ddd;
+            border-radius: 50%; /* Làm tròn hình ảnh */
+            transition: border-color 0.3s ease;
+        }
+
+        .container.mb-5 .col-xl-4 img:hover {
+            border-color: #ff6f61;
+        }
+
+        /* Tên sản phẩm */
+        .container.mb-5 .col-xl-4 p.h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #444;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Giá tiền sản phẩm, căn giữa */
+        .container.mb-5 .col-xl-4 p:last-child {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ff6f61;
+            margin-top: auto; /* Đẩy giá tiền xuống dưới */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px; /* Chiều cao cố định cho giá tiền */
+        }
+
+        /* Tiêu đề "BEST SELLER OF THE MONTH" */
+        .container.mb-5 .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /*End Best Seller*/
         /* responsive */
         @media (max-width: 768px) {
             .slider-content {
@@ -252,7 +328,7 @@ $rootPath = '/Lap_trinh_web';
                                 </a>
                                 <p class="h4 text-dark" style="text-align: center;"><?php echo $productData['name']; ?></p>
                                 <!-- <a class="btn btn-primary btn-lg" href="product_detail.php?productId=<?php echo $productData['product_id']; ?>">Buy Now</a> -->
-                                 <p> <?php echo $productData['price']  ?>đ </p>
+                                <p> <?php echo number_format($productData['price'], 0, ',', '.'); ?>đ </p>
                             </div>
                         </div>
                     <?php } ?>
