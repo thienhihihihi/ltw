@@ -227,11 +227,17 @@ $rootPath = '/Lap_trinh_web';
 
         /*End Best Seller*/
         /* responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
             .slider-content {
                 font-size: 12px;
                 left: 5%;
                 top: 45%;
+            }
+            .slider-left{
+                width: 100%;
+            }
+            .slider-right{
+                width: 0;
             }
         }
 
@@ -240,6 +246,12 @@ $rootPath = '/Lap_trinh_web';
                 font-size: 10px;
                 left: 3%;
                 top: 40%;
+            }
+            .slider-left{
+                width: 100%;
+            }
+            .slider-right{
+                width: 0;
             }
         }
         /* responsive */
@@ -312,26 +324,29 @@ $rootPath = '/Lap_trinh_web';
                 }
                 
             ?>
-            <div class="container mb-5">
-                <div class="row text-center">
-                    <div class="title" >BEST SELLER OF THE MONTH</div>
-                </div>
-                <div class="row">
-                    <?php while($productData = mysqli_fetch_assoc($result)){ ?>
-                            
-                        <div class="col-xl-4">
-                            <div class="text-center">
-                                <a href="product_detail.php?productId=<?php echo $productData['product_id']; ?>">
-                                    <img alt="topProduct" width="200" height="200" 
-                                    src="public/img/products/<?php echo $productData['images']; ?>"
-                                    class="rounded-circle mb-3 mt-3 border border-2" />
-                                </a>
-                                <p class="h4 text-dark" style="text-align: center;"><?php echo $productData['name']; ?></p>
-                                <!-- <a class="btn btn-primary btn-lg" href="product_detail.php?productId=<?php echo $productData['product_id']; ?>">Buy Now</a> -->
-                                <p> <?php echo number_format($productData['price'], 0, ',', '.'); ?>đ </p>
+            <div class="the-newest container-fluid"> 
+
+                <div class="container mb-5">
+                    <div class="row text-center">
+                        <div class="title" >BEST SELLER OF THE MONTH</div>
+                    </div>
+                    <div class="row">
+                        <?php while($productData = mysqli_fetch_assoc($result)){ ?>
+                                
+                            <div class="col-xl-4">
+                                <div class="text-center">
+                                    <a href="product_detail.php?productId=<?php echo $productData['product_id']; ?>">
+                                        <img alt="topProduct" width="200" height="200" 
+                                        src="public/img/products/<?php echo $productData['images']; ?>"
+                                        class="rounded-circle mb-3 mt-3 border border-2" />
+                                    </a>
+                                    <p class="h4 text-dark" style="text-align: center;"><?php echo $productData['name']; ?></p>
+                                    <!-- <a class="btn btn-primary btn-lg" href="product_detail.php?productId=<?php echo $productData['product_id']; ?>">Buy Now</a> -->
+                                    <p> <?php echo number_format($productData['price'], 0, ',', '.'); ?>đ </p>
+                                </div>
                             </div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
         <?php } ?>
