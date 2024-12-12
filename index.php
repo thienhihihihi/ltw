@@ -11,6 +11,9 @@ $rootPath = '/Lap_trinh_web';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olivia</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/Favicon/favicon.ico"> -->
+
+
     <!-- FONT -->
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'> 
     <link href="https://fonts.cdnfonts.com/css/harmonyos-sans" rel="stylesheet">         
@@ -247,12 +250,30 @@ $rootPath = '/Lap_trinh_web';
                 left: 3%;
                 top: 40%;
             }
+            .slider-content .subtitle{
+                font-size: 20px ;
+            }
+            .slider-content .title{
+                font-size: 30px;
+            }
             .slider-left{
                 width: 100%;
             }
             .slider-right{
                 width: 0;
             }
+        }
+
+        @media (max-width: 480px){
+
+        }
+        
+        @media (max-width: 480px){
+
+        }
+        
+        @media (max-width: 320px){
+
         }
         /* responsive */
 
@@ -697,9 +718,9 @@ $rootPath = '/Lap_trinh_web';
         <!-- END JOIN THE CULT -->
 
         <!-- START INFORMATION -->
-        <div class="information mb-5">
+        <div class="information">
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-lg-4 mb-5">
                     <div class="box-center d-flex flex-column justify-content-center align-items-center text-center">
                         <svg fill="none" focusable="false" width="24" height="24" class="icon icon--picto-email   " viewBox="0 0 24 24">
                             <path d="M21 8V5H3V8M21 8V19H3V8M21 8L12 12.5L3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -709,7 +730,7 @@ $rootPath = '/Lap_trinh_web';
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-12 col-lg-4 mb-5">
                     <div class="box-center d-flex flex-column justify-content-center align-items-center text-center">
                         <svg fill="none" focusable="false" width="24" height="24" class="icon icon--picto-box   " viewBox="0 0 24 24">
                             <path d="M12 21L21 17.1429V6.85714M12 21L3 17.1429V6.85714M12 21V10.7143M21 6.85714L12 3L3 6.85714M21 6.85714L12 10.7143M3 6.85714L12 10.7143" stroke="currentColor" stroke-width="2"></path>
@@ -719,7 +740,7 @@ $rootPath = '/Lap_trinh_web';
                     </div>
                 </div>
                 
-                <div class="col-4">
+                <div class="col-12 col-lg-4 mb-5">
                     <div class="box-center d-flex flex-column justify-content-center align-items-center text-center">
                         <svg fill="none" focusable="false" width="24" height="24" class="icon icon--picto-chat   " viewBox="0 0 24 24">
                             <path d="M18.3234 10.1404C18.3234 14.6362 14.9806 17.9327 10.473 17.9327M18.3234 10.1404C18.3234 5.64457 14.6693 2 10.1617 2C5.65412 2 2 5.0042 2 9.5C2 10.9769 2.50153 12.5042 3 13.5L2 18.2807L6.4857 16.9369C7.7184 17.6824 8.92606 17.9327 10.473 17.9327M18.3234 10.1404C19.5489 10.7827 22 12.6539 22 15C22 17.3461 21.3333 18.9776 21 19.5L21.5 22L18.5 21.5C16.6487 22.2884 12.4514 22.6788 10.473 17.9327" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

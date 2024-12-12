@@ -125,7 +125,7 @@ if (isset($_POST['login_user'])) {
             
             <p>
               Bạn chưa có tài khoản?
-              <a href="/ltw/si  gn_up.php">Đăng kí ngay</a>
+              <a href="/ltw/sign_up.php">Đăng kí ngay</a>
             </p>
             <p class="mt-2 mb-2">
               Quên mật khẩu? <a href="/ltw/auth/forgot_password.php">Lấy lại mật khẩu</a>
