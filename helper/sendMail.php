@@ -20,11 +20,11 @@ function sendMailOrder($mail, $receiver, $content) {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                 
                               
-        
+        $mail->CharSet = 'UTF-8';
         // Recipients
         $mail->setFrom('thien2211334@gmail.com', 'Shop-olivia Admin');
         $mail->addAddress($receiver['email'], $receiver['name']);     
-      echo $receiver['email'];
+      
         $mail->addReplyTo('thien2211334@gmail.com', 'Shop-olivia Admin');
 
         // Content
@@ -61,7 +61,7 @@ function verifyEmail($mail, $receiver, $verifyCode) {
         $mail->Password   = 'kspp rswr skzy yutd';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                        
-        
+        $mail->CharSet = 'UTF-8';
         // Recipients
         $mail->setFrom('thien2211334@gmail.com', 'Shop-olivia Admin');
         $mail->addAddress($receiver['email'], $receiver['name']);     
@@ -102,7 +102,7 @@ function resetPassword($mail, $receiver) {
         $mail->Password   = 'kspp rswr skzy yutd';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                        
-        
+        $mail->CharSet = 'UTF-8';
         // Recipients
         $mail->setFrom('thien2211334@gmail.com', 'Shop-olivia Admin');
         $mail->addAddress($receiver['email'], $receiver['name']);     
@@ -143,7 +143,7 @@ function sendLink2ChangePWD($mail, $receiver, $content) {
         $mail->Password   = 'kspp rswr skzy yutd';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                        
-        
+        $mail->CharSet = 'UTF-8';
         // Recipients
         $mail->setFrom('thien2211334@gmail.com', 'Shop-olivia Admin');
         $mail->addAddress($receiver['email'], $receiver['name']);     

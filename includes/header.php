@@ -126,7 +126,9 @@
         cursor: pointer;
         margin-bottom: 20px;
     }
-
+    .dropdown {
+    display: none;
+}
     /* Media queries */
     @media (max-width: 992px) {
         .user-links .icon .text {
@@ -135,14 +137,67 @@
         .search-input {
         display: none;
         }
+.navbar{
+    display:flex;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+}
+        .dropdown{
+           
+            display: block;
+   
+
+        }
+        
+.show{
+    display:block !important;
+}
+        .dropbtn {
+  background-color:#F8F9FA;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #A8A8A8;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+   display: none; 
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+        
     }
 
     @media (min-width: 992px) {
         .nav-in-header {
         display: none;
         }
+        
     }
 </style>
+
 <div class="header-container">
     <!-- <nav class="navbar navbar-expand-lg nav-in-header">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -249,6 +304,16 @@
 
 <div class="navbar-container" style="background-color:rgba(248,249,250,1)!important">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Menu <i class="fa-solid fa-bars"></i></button>
+  <div id="myDropdown" class="dropdown-content">
+  <a class="nav-link" href="/ltw">Home</a>
+  <a class="nav-link" href="/ltw/product.php">Product</a>
+  <a class="nav-link" href="/ltw/contact.php">Contact</a>
+  <a class="nav-link" href="/ltw/posts.php">News</a>
+  <a class="nav-link" href="/ltw/policy.php">Policy</a>
+  </div>
+</div>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto stroke">
                 <li class="nav-item"><a class="nav-link" href="/ltw">Home</a></li>
@@ -264,6 +329,24 @@
     </nav>
 </div>
 <script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
     function toggleSearchSidebar() {
         // Kiểm tra nếu màn hình nhỏ hơn 992px mới cho mở sidebar
         if (window.innerWidth <= 992) {
@@ -281,4 +364,8 @@
             }
         }
     };
+
+
+
+    
 </script>

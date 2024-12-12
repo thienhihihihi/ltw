@@ -263,17 +263,19 @@ $rootPath = '/Lap_trinh_web';
                 width: 0;
             }
         }
-
-        @media (max-width: 480px){
-
+        @media (max-width: 768px) {
+            .container.mb-5 .col-xl-4 {
+                flex: 1 1 calc(50% - 20px); /* 2 sản phẩm mỗi hàng */
+                max-width: calc(50% - 20px);
+            }
         }
-        
-        @media (max-width: 480px){
 
-        }
-        
-        @media (max-width: 320px){
-
+        /* Responsive for screens smaller than 576px (mobile) */
+        @media (max-width: 576px) {
+            .container.mb-5 .col-xl-4 {
+                flex: 1 1 100%; /* 1 sản phẩm mỗi hàng */
+                max-width: 100%; /* Đảm bảo sản phẩm chiếm toàn bộ chiều ngang */
+            }
         }
         /* responsive */
 
