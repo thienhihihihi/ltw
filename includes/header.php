@@ -29,15 +29,30 @@
     }
 
     .logo {
-        flex: 1;
-        display: flex;
-        justify-content: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
     }
 
     .logo img {
-        height: 70px;
+        height: 70px; /* Kích thước mặc định cho desktop */
+        max-width: 100%; /* Đảm bảo logo không vượt quá chiều ngang container */
+        object-fit: contain; /* Giữ tỷ lệ logo */
     }
 
+    /* Responsive cho màn hình nhỏ hơn 992px */
+    @media (max-width: 992px) {
+        .logo img {
+            height: 50px; /* Giảm chiều cao logo trên tablet */
+        }
+    }
+
+    /* Responsive cho màn hình nhỏ hơn 576px */
+    @media (max-width: 576px) {
+        .logo img {
+            height: 40px; /* Giảm chiều cao logo trên điện thoại */
+        }
+    }
     .user-links {
         flex: 1;
         display: flex;
@@ -196,6 +211,32 @@
         }
         
     }
+     @media (max-width:768px ){
+        .user-links > a{
+            margin:0;
+        }
+       .header-container{
+padding:0;
+.form-control{
+
+padding:0;
+}
+        }
+     }
+     @media (max-width:512px ){
+
+        .user-links {
+            padding-left:10%;
+  display: grid;
+  grid-template-columns: auto auto; /* Hai cột cho hai link đầu */
+}
+
+.userlink a:nth-of-type(3) {
+  grid-column: 1 / -1; /* Thẻ này chiếm toàn bộ hàng */
+}
+
+        
+     }
 </style>
 
 <div class="header-container">
@@ -274,10 +315,11 @@
                 <li><a class="dropdown-item" href="/ltw/customer/my_order.php">Đơn hàng</a></li>
                 <li><a class="dropdown-item" href="/ltw/customer/check_out.php">Thanh toán</a></li>
                 <li><a class="dropdown-item" href="/ltw/customer/changePassword.php">Đổi mật khẩu</a></li>
+                <li> <a class="dropdown-item" href="/ltw/customer/logout.php">Đăng xuất</a></li>
               </ul>
 
 
-              <a class="nav-link" href="/ltw/customer/logout.php">Đăng xuất</a>
+           
 
         </div>
          

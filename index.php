@@ -11,7 +11,6 @@ $rootPath = '/Lap_trinh_web';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olivia</title>
-    <!-- <link rel="icon" type="image/x-icon" href="/images/Favicon/favicon.ico"> -->
 
 
     <!-- FONT -->
@@ -160,7 +159,7 @@ $rootPath = '/Lap_trinh_web';
             justify-content: space-between;
         }
 
-        /* Định dạng cho ô sản phẩm */
+        
         .container.mb-5 .col-xl-4 {
             display: flex;
             flex-direction: column;
@@ -171,10 +170,10 @@ $rootPath = '/Lap_trinh_web';
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-            flex: 1 1 calc(33.333% - 20px); /* Đảm bảo kích thước cân đối */
+            flex: 1 1 calc(33.333% - 20px); 
             margin: 10px;
-            max-width: 33.333%; /* Đảm bảo cân bằng 3 sản phẩm trong một hàng */
-            min-height: 400px; /* Đảm bảo chiều cao tối thiểu đồng đều */
+            max-width: 33.333%; 
+            min-height: 400px; 
         }
 
         .container.mb-5 .col-xl-4:hover {
@@ -182,13 +181,13 @@ $rootPath = '/Lap_trinh_web';
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Hình ảnh sản phẩm */
+       
         .container.mb-5 .col-xl-4 img {
             width: 180px;
             height: 180px;
             object-fit: cover;
             border: 3px solid #ddd;
-            border-radius: 50%; /* Làm tròn hình ảnh */
+            border-radius: 50%; 
             transition: border-color 0.3s ease;
         }
 
@@ -196,7 +195,7 @@ $rootPath = '/Lap_trinh_web';
             border-color: #ff6f61;
         }
 
-        /* Tên sản phẩm */
+       
         .container.mb-5 .col-xl-4 p.h4 {
             font-size: 1.2rem;
             font-weight: 600;
@@ -205,20 +204,20 @@ $rootPath = '/Lap_trinh_web';
             text-align: center;
         }
 
-        /* Giá tiền sản phẩm, căn giữa */
+       
         .container.mb-5 .col-xl-4 p:last-child {
             font-size: 1.1rem;
             font-weight: 500;
             color: #ff6f61;
-            margin-top: auto; /* Đẩy giá tiền xuống dưới */
+            margin-top: auto; 
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 50px; /* Chiều cao cố định cho giá tiền */
+            height: 50px;
         }
 
-        /* Tiêu đề "BEST SELLER OF THE MONTH" */
+       
         .container.mb-5 .title {
             font-size: 2rem;
             font-weight: bold;
@@ -265,16 +264,16 @@ $rootPath = '/Lap_trinh_web';
         }
         @media (max-width: 768px) {
             .container.mb-5 .col-xl-4 {
-                flex: 1 1 calc(50% - 20px); /* 2 sản phẩm mỗi hàng */
+                flex: 1 1 calc(50% - 20px); 
                 max-width: calc(50% - 20px);
             }
         }
 
-        /* Responsive for screens smaller than 576px (mobile) */
+        
         @media (max-width: 576px) {
             .container.mb-5 .col-xl-4 {
-                flex: 1 1 100%; /* 1 sản phẩm mỗi hàng */
-                max-width: 100%; /* Đảm bảo sản phẩm chiếm toàn bộ chiều ngang */
+                flex: 1 1 100%; 
+                max-width: 100%; 
             }
         }
         /* responsive */
